@@ -4,8 +4,8 @@
 //  hvis den fejler upload pårund af permistions så prøv
 //  sudo chmod 666 <port>
 
-pros::Motor left_mtr(-1);
-pros::Motor right_mtr(2);
+pros::Motor left_mtr(2);
+pros::Motor right_mtr(-1);
 
 /*
 line: distance(cm), speed(rpm)
@@ -18,7 +18,7 @@ std::vector<std::string> path = {
 	"loop"};
 
 float wheel_circumference = 10.3 * M_PI;
-int robot_width = 29;
+int robot_width = 30;
 
 /**
  * A callback function for LLEMU's center button.
@@ -142,7 +142,7 @@ void opcontrol()
 				right_mtr.move_velocity(speed);
 				left_mtr.move_velocity(speed * (radius - (robot_width / 2)) / (radius + (robot_width / 2)));
 			}
-			float time = (angle / 360) * (((2 * M_PI * radius) / (wheel_circumference)) / speed) * 58;
+			float time = (angle / 360) * (((2 * M_PI * (radius + (robot_width / 2))) / (wheel_circumference)) / speed) * 60;
 			pros::delay(time * 1000);
 		}
 	}
