@@ -192,8 +192,6 @@ std::vector<std::string> path = {
 
 ---
 
-If you'd like further clarification or additional explanations, feel free to ask!
-
 # Use and upload the code to vex v5
 
 To use this code in Visual Studio Code (VSCode) with the PROS extension, follow these steps:
