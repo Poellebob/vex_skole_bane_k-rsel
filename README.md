@@ -72,11 +72,11 @@ For linear movement, both wheels move at the same speed, allowing the robot to d
 **Calculation Steps:**
 
 1. **Time to Complete Movement**:  
-   $ \text{time} = \frac{\text{distance}}{\text{wheel circumference}} \div \text{speed} $
+   $\text{time} = \frac{\text{distance}}{\text{wheel circumference}} \div \text{speed}$
 
    - This calculates how long (in minutes) the robot needs to move to cover the given distance.
    - Since `pros::delay` uses milliseconds, the result is converted to milliseconds:  
-     $ \text{time} \times 60,000 $
+     $\text{time} \times 60,000$
 
 2. **Move Wheels at the Same Speed**:  
    Both motors are set to the same speed:
@@ -102,7 +102,7 @@ For circular movement, the robot follows an arc. One wheel moves faster than the
 
 1. **Calculate Speed Ratio Between Wheels**  
    Since one wheel moves along a larger arc than the other, the inner wheel must move slower.  
-   $ \text{inner speed} = \text{speed} \times \frac{\text{radius} - \frac{\text{robot width}}{2}}{\text{radius} + \frac{\text{robot width}}{2}} $
+   $\text{inner speed} = \text{speed} \times \frac{\text{radius} - \frac{\text{robot width}}{2}}{\text{radius} + \frac{\text{robot width}}{2}}$
    This formula calculates the speed ratio of the inner wheel relative to the outer wheel.
 
 2. **Set Wheel Speeds**
@@ -120,12 +120,12 @@ For circular movement, the robot follows an arc. One wheel moves faster than the
 
 3. **Calculate Time to Complete the Turn**  
    To calculate how long the turn should last, we need to determine how far the outer wheel will move.  
-   $ \text{distance} = 2 \pi (\text{radius} + \frac{\text{robot width}}{2}) \cdot \frac{\text{angle}}{360} $
+   $\text{distance} = 2 \pi (\text{radius} + \frac{\text{robot width}}{2}) \cdot \frac{\text{angle}}{360}$
    - This gives the arc length (in cm) for the outer wheel.
    - Next, calculate the time required for the wheel to move this distance:  
-     $ \text{time} = \frac{\text{distance}}{\text{wheel circumference}} \div \text{speed} $
+     $\text{time} = \frac{\text{distance}}{\text{wheel circumference}} \div \text{speed}$
    - Convert to milliseconds:  
-     $ \text{time} \times 60,000 $
+     $\text{time} \times 60,000$
    - **Delay for this time to complete the turn.**
 
 ---
