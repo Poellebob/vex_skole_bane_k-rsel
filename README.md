@@ -192,25 +192,6 @@ std::vector<std::string> path = {
 
 ---
 
-## **6. Common Issues & Debugging**
-
-- **Robot Moves Too Fast/Slow**: Check speed parameter in RPM.
-- **Wrong Turn Direction**: Verify if `left` or `right` is specified in the path.
-- **Loop Not Working**: Ensure the `loop` command is present and formatted correctly.
-
----
-
-## **7. Summary**
-
-1. **Path System**: The robot follows a series of "line", "circ", or "loop" commands.
-2. **Linear Movement**: Both wheels move at the same speed for a specified time.
-3. **Circular Movement**: One wheel moves faster than the other to follow an arc.
-4. **Path Customization**: Paths are defined using a simple string format.
-
-By understanding the math and logic behind this system, you can create custom paths for the robot to follow autonomously. 🎉
-
----
-
 If you'd like further clarification or additional explanations, feel free to ask!
 
 # Use and upload the code to vex v5
