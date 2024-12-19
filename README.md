@@ -170,7 +170,7 @@ For circular movement, the robot follows an arc. One wheel moves faster than the
 
 | **Constant**          | **Value**                | **Description**                                         |
 | --------------------- | ------------------------ | ------------------------------------------------------- |
-| `wheel_circumference` | \( 10.3 \times \pi \) cm | The wheel's circumference, used to calculate rotations. |
+| `wheel_circumference` | $10.3cm \times \pi$      | The wheel's circumference, used to calculate rotations. |
 | `robot_width`         | 34 cm                    | The distance between the two wheels (wheelbase).        |
 
 ---
