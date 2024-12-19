@@ -235,7 +235,7 @@ To use this code in Visual Studio Code (VSCode) with the PROS extension, follow 
 
    - Find the `src/main.cpp` and open it by clicking on it.
    - Connect the vex v5 brain to your computer via usb.
-   - Find the PROS "build and upload" button and click on it.
+   - Find the PROS "build and upload" button in the top right and click on it.
 
 5. **Run the Code**:
    - Press the play button on the v5 brain.
